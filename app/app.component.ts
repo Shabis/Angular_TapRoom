@@ -1,41 +1,40 @@
 import { Component } from '@angular/core';
-import { Task } from './task.model';
+import { Keg } from './keg.model';
 
 @Component({
-  selector: 'to-do',
+  selector: 'tap-room',
   template: `
   <div class="container">
-    <h1>To-Do:</h1>
-    <task-list
-      [childTaskList]="masterTaskList"
+    <h1>Keg Inventory</h1>
+    <keg-list
+      [childKegList]="masterKegList"
       (clickSender)="showDetails($event)"
-     ></task-list>
-    <edit-task
-      [childSelectedTask]="selectedTask"
-      (doneClickedSender)="finishedEditing()"
-    ></edit-task>
-    <new-task
-      (newTaskSender)="addTask($event)"
-    ></new-task>
+     ></keg-list>
+    <edit-keg
+      [childSelectedKeg]="selectedKeg"
+      (tappedClickedSender)="finishedEditing()"
+    ></edit-keg>
+    <new-keg
+      (newKegSender)="addKeg($event)"
+    ></new-keg>
   </div>
   `
 })
 
 export class AppComponent {
-  public masterTaskList: Task[] = [
-      new Task("Create To-Do List app.", 0),
-      new Task("Learn Kung Fu.", 1),
-      new Task("Rewatch all the Lord of the Rings movies.", 2),
-      new Task("Do the laundry.", 3)
+  public masterKegList: Keg[] = [
+      new Keg("Pilsner", "Widmer", 5, 4),
+      new Keg("Red", "Oakshire", 5, 5),
+      new Keg("Old Rasputin", "North Coast", 6, 9)
   ];
-  selectedTask: Task = null;
-  showDetails(clickedTask: Task) {
-    this.selectedTask = clickedTask;
+  selectedKeg: Keg = null;
+  showDetails(clickedKeg: Keg) {
+    this.selectedKeg = clickedKeg;
   }
   finishedEditing() {
-    this.selectedTask = null;
+    this.selectedKeg = null;
   }
-  addTask(newTaskFromChild: Task) {
-    this.masterTaskList.push(newTaskFromChild);
+  addKeg(newKegFromChild: Keg) {
+    this.masterKegList.push(newKegFromChild);
   }
 }

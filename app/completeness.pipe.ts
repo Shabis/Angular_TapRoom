@@ -1,23 +1,23 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { Task } from './task.model';
+import { Keg } from './keg.model';
 
 @Pipe({
   name: "completeness",
   pure: true
 })
 export class CompletenessPipe implements PipeTransform {
-  transform(input: Task[], desiredCompleteness) {
-    var output: Task[] = [];
-    if (desiredCompleteness === "notDone") {
+  transform(input: Keg[], desiredCompleteness) {
+    var output: Keg[] = [];
+    if (desiredCompleteness === "notTapped") {
       for (var i = 0; i < input.length; i++) {
-        if (input[i].done === false) {
+        if (input[i].tapped === false) {
         output.push(input[i]);
         }
       }
       return output;
-    } else if (desiredCompleteness === "isDone") {
+    } else if (desiredCompleteness === "isTapped") {
       for (var i = 0; i < input.length; i++) {
-        if (input[i].done === true) {
+        if (input[i].tapped === true) {
           output.push(input[i]);
         }
       }
