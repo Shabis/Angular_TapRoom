@@ -4,7 +4,7 @@
 
 ## Description
 
-Tap Room is a web app that allows you manage beer kegs via AngularJS.
+Tap Room is a web app that allows to you manage beer kegs.
 
 ## Setup/Installation Requirements
 
