@@ -11,6 +11,8 @@ import { Keg } from './keg.model';
     </select>
     <div *ngFor="let currentKeg of childKegList | completeness:selectedCompleteness">
       <keg-display [keg]="currentKeg"></keg-display>
+      <button (click)="editButtonHasBeenClicked(currentKeg)">Edit</button>
+      <button (click)="pourButtonHasBeenClicked(currentKeg)">Pour</button>
     </div>
   `
 })
@@ -27,8 +29,5 @@ export class KegListComponent {
   }
   pourButtonHasBeenClicked(kegToPour: Keg) {
     kegToPour.pints = (( kegToPour.pints - 1 ));
-    if (kegToPour.pints <= 110) {
-      console.log("WARNING");
-    }
   }
 }

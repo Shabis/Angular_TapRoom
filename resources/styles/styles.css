@@ -6,3 +6,15 @@ h1 {
   margin-top: 20px;
   margin-bottom: 20px;
 }
+
+.warning .high {
+  color: #ff0000;
+}
+
+.low {
+  color: #0DFF1D;
+}
+
+.medium {
+  color: #FF840D
+}

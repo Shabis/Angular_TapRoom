@@ -14,7 +14,8 @@ import { Keg } from './keg.model';
     <br>
     <label>{{ "Price: $" + keg.price }}</label>
     <br>
-    <label>{{ "Pints Remaining: " + keg.pints }}</label>
+    <label *ngIf="keg.pints<=10" class="warning">{{ "Pints Remaining: " + keg.pints }}</label>
+    <label *ngIf="keg.pints>10">{{ "Pints Remaining: " + keg.pints }}</label>
   </div>
   `
 })
