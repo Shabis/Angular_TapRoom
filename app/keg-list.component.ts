@@ -23,13 +23,14 @@ export class KegListComponent {
   public selectedCompleteness: string = "all";
   onChange(optionFromMenu) {
     this.selectedCompleteness = optionFromMenu;
-    console.log(this.selectedCompleteness);
   }
   editButtonHasBeenClicked(kegToEdit: Keg) {
     this.clickSender.emit(kegToEdit);
   }
   pourButtonHasBeenClicked(kegToPour: Keg) {
-    this.clickSender.emit(kegToPour);
-      kegToPour.pints = (( kegToPour.pints - 1 ));
+    kegToPour.pints = (( kegToPour.pints - 1 ));
+    if (kegToPour.pints <= 110) {
+      console.log("WARNING");
+    }
   }
 }

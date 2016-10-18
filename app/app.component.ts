@@ -12,7 +12,7 @@ import { Keg } from './keg.model';
      ></keg-list>
     <edit-keg
       [childSelectedKeg]="selectedKeg"
-      (tappedClickedSender)="finishedEditing()"
+      (doneClickedSender)="finishedEditing()"
     ></edit-keg>
     <new-keg
       (newKegSender)="addKeg($event)"
