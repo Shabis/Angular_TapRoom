@@ -23,9 +23,9 @@ import { Keg } from './keg.model';
 
 export class AppComponent {
   public masterKegList: Keg[] = [
-      new Keg("Pilsner", "Widmer", 5, 4),
+      new Keg("Pilsner", "Widmer", 3, 4),
       new Keg("Red", "Oakshire", 5, 5),
-      new Keg("Old Rasputin", "North Coast", 6, 9)
+      new Keg("Old Rasputin", "North Coast", 7, 9)
   ];
   selectedKeg: Keg = null;
   showDetails(clickedKeg: Keg) {

@@ -1,3 +1,7 @@
+body {
+  background: #5571E8;
+  text-align: center;
+}
 h1 {
   color: #000000;
 }
@@ -7,14 +11,109 @@ h1 {
   margin-bottom: 20px;
 }
 
-.warning .high {
+.warning {
   color: #ff0000;
+}
+
+.high {
+  color: #FF840D
+}
+
+.keg {
+  /*border: 1px solid #000000;*/
+  padding: 10px;
+  width: 200px;
+  background-color: #A2CBFF;
+  display: block;
+  margin: 0 auto 20px;
 }
 
 .low {
   color: #0DFF1D;
 }
 
-.medium {
-  color: #FF840D
+.btn {
+  background: #FFFFFF;
+  font-weight: bold;
+  border: 1px solid #000000;
+}
+
+input {
+  margin: 10px;
+}
+
+#newKeg {
+  background: #FFF;
+  padding: 15px;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+  width: 40%;
+  display: block;
+  margin: 15px auto;
+}
+
+
+#newKeg input[type="text"],
+#newKeg textarea {
+  width: 100%;
+  border: 1px solid #ccc;
+  margin: 0 0 5px;
+  padding: 10px;
+}
+
+#newKeg input[type="text"]:hover,
+#newKeg textarea:hover {
+  border: 1px solid #aaa;
+}
+
+#newKeg button[type="submit"] {
+  cursor: pointer;
+  width: 100%;
+  border: none;
+  background: #4CAF50;
+  color: #FFF;
+  margin: 0 0 5px;
+  padding: 10px;
+  font-size: 15px;
+}
+
+#newKeg button[type="submit"]:hover {
+  background: #43A047;
+}
+
+#editKeg {
+  background: #FFF;
+  padding: 15px;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+  width: 40%;
+  display: block;
+  margin: 15px auto;
+}
+
+
+#editKeg input[type="text"],
+#editKeg textarea {
+  width: 100%;
+  border: 1px solid #ccc;
+  margin: 0 0 5px;
+  padding: 10px;
+}
+
+#editKeg input[type="text"]:hover,
+#editKeg textarea:hover {
+  border: 1px solid #aaa;
+}
+
+#editKeg button[type="submit"] {
+  cursor: pointer;
+  width: 100%;
+  border: none;
+  background: #4CAF50;
+  color: #FFF;
+  margin: 0 0 5px;
+  padding: 10px;
+  font-size: 15px;
+}
+
+#editKeg button[type="submit"]:hover {
+  background: #43A047;
 }

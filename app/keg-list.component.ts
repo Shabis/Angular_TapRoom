@@ -9,10 +9,10 @@ import { Keg } from './keg.model';
       <option value="isTapped">Show Tapped</option>
       <option value="notTapped">Show Not Tapped</option>
     </select>
-    <div *ngFor="let currentKeg of childKegList | completeness:selectedCompleteness">
-      <keg-display [keg]="currentKeg"></keg-display>
-      <button (click)="editButtonHasBeenClicked(currentKeg)">Edit</button>
-      <button (click)="pourButtonHasBeenClicked(currentKeg)">Pour</button>
+      <div class="keg" *ngFor="let currentKeg of childKegList | completeness:selectedCompleteness">
+        <keg-display [keg]="currentKeg"></keg-display>
+        <button class="btn" (click)="editButtonHasBeenClicked(currentKeg)">Edit</button>
+        <button class="btn" (click)="pourButtonHasBeenClicked(currentKeg)">Pour</button>
     </div>
   `
 })
