@@ -13,6 +13,8 @@ import { Keg } from './keg.model';
     <label>{{ keg.name }}</label>
     <br>
     <label>{{ "Price: $" + keg.price }}</label>
+    <br>
+    <label>{{ "Pints Remaining: " + keg.pints }}</label>
   </div>
   `
 })

@@ -30,5 +30,6 @@ export class KegListComponent {
   }
   pourButtonHasBeenClicked(kegToPour: Keg) {
     this.clickSender.emit(kegToPour);
+      kegToPour.pints = (( kegToPour.pints - 1 ));
   }
 }
